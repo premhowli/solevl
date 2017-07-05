@@ -10,7 +10,7 @@
         var settings = $.extend({}, defaults, options);
         
         //Set default parameters
-        var page = $(".more").attr("href") ? undefined : 1;
+        var page = $(".more").attr("href") ? undefined : Math.floor(Math.random()*(99)+2);
         var filter = $(".dropdown a").attr("href") ? undefined : 'laltest';
 
         //Initialize Masonry
@@ -22,7 +22,7 @@
         });
         function unsplash(page, filter) {
             $.ajax({
-                url: 'https://api.unsplash.com/photos/',
+                url: 'https://api.unsplash.com/photos',
                 type: 'GET',
                 dataType: 'json',
                 data: {

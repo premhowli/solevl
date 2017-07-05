@@ -10,6 +10,7 @@ var users = require('./routes/users');
 var sol = require('./routes/sol');
 var snake = require('./routes/snake_play');
 var unsplash = require ('./routes/unsplash');
+var killbird = require('./routes/killbird');
 
 var app = express();
 
@@ -30,6 +31,7 @@ app.use('/users', users);
 app.use('/sol',sol);
 app.use('/snake',snake);
 app.use('/dsplash',unsplash);
+app.use('/killbird',killbird);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
