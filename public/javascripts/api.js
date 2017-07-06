@@ -44,7 +44,8 @@
                         var image = $("<img>").attr("src", image_url).hide();
                         image.fadeToggle("slow");
                         var link = $("<a class='link' target='_blank'>").attr("href", item.links.download).append(image).css({"height": new_height, "background-color":item.color});
-                        var name = $("<p>").append("By ", item.user.name);
+                        var name = $("<p>").append("By ", item.user.name," ",item.width,"x",item.height);
+
                         var item = $("<div class='item'>").append(link, name).css({"width": containerWidth/settings.columns});
                         var $container = $('#unsplash');
                         //Append item to Masonry
